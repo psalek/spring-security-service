@@ -1,0 +1,20 @@
+server:
+  port: 8080
+spring:    
+  application:
+    name: security-service
+  datasource:
+    url: jdbc:mysql://localhost/sakila
+    username: sakila
+    password: sakila
+    driverClassName: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
